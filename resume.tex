@@ -1,133 +1,259 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LaTeX Template: Curriculum Vitae
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
 %
-% Source: http://www.howtotex.com/
-% Feel free to distribute this template, but please keep the
-% referal to HowToTeX.com.
-% Date: July 2011
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[paper=letter,fontsize=11pt]{scrartcl} % KOMA-article class
-\usepackage[margin=0.5in]{geometry}							
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[protrusion=true,expansion=true]{microtype}
-\usepackage{amsmath,amsfonts,amsthm}     % Math packages
-\usepackage{graphicx}                    % Enable pdflatex
-\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
-\usepackage{geometry}
-	\textheight=700px                    % Saving trees ;-)
-\usepackage{url}
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\frenchspacing              % Better looking spacings after periods
-\pagestyle{empty}           % No pagenumbers/headers/footers
+\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
 
-%%% Custom sectioning (sectsty package)
-%%% ------------------------------------------------------------
-\usepackage{sectsty}
-
-\sectionfont{%			            % Change font of \section command
-	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
-	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
-
-%%% Macros
-%%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
-
-\newcommand{\MyName}[1]{ % Name
-		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-		\par \normalsize \normalfont}
-		
-\newcommand{\MySlogan}[1]{ % Slogan (optional)
-		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-		\par \normalsize \normalfont}
-
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
-
-\newcommand{\PersonalEntry}[2]{
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
-
-\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value	
-		
-\newcommand{\EducationEntry}[4]{
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{White}{%
-			\parbox{6em}{%
-			\hfill\color{Black}#2}} \par  % Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
-
-\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
-		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{White}{\color{Black}#2} \par  % Duration
-		\noindent \textit{#3} \par              % Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
-
-%%% Begin Document
-%%% ------------------------------------------------------------
 \begin{document}
-% you can upload a photo and include it here...
-%\begin{wrapfigure}{l}{0.5\textwidth}
-%	\vspace*{-2em}
-%		\includegraphics[width=0.15\textwidth]{photo}
-%\end{wrapfigure}
 
-\MyName{Avery Harnish}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
 
-%\sepspace
+\lastupdated % Print the Last Updated text at the top right
 
-%%% Personal details
-%%% ------------------------------------------------------------
-\NewPart{Personal details}{}
+\namesection{Avery}{Harnish}{ % Your name
+\href{mailto:averyharnish@gmail.com}{averyharnish@gmail.com} | 717.277.8798 % Your contact information
+}
 
-\PersonalEntry{Address 1}{111 Quad Dr. Box 9207, Easton, PA 18042}
-\PersonalEntry{Address 2}{1407 Douglas Fir Dr. Lebanon, PA 17042}
-\PersonalEntry{Phone}{(717) 454-7980}
-\PersonalEntry{Mail}{\url{harnisha@lafayette.edu}}
-\PersonalEntry{Github}{\url{github.com/EverlastingBugstopper}}
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
 
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
+\begin{minipage}[t]{0.35\textwidth} % The left column takes up 35% of the text width of the page
 
-\EducationEntry{Cedar Crest High School}{2011-2015}{Lebanon, PA}{Graduated in Top 10\% of class -- 4.1 GPA}
-\sepspace
+%------------------------------------------------
+% Education
+%------------------------------------------------
 
-\EducationEntry{Lafayette College}{2015-2019}{Easton, PA}{Coursework in Computer Science, Calculus, Discrete Mathematics, Religion, and Physics. Pursuing B.S. in Computer Science. Treasurer of the Association for Computing and Machinery at Lafayette, and member of Outdoors Society. I developed a small social network with a group of students for the Software Engineering course. The software had a dynamic text-based user interface that interacted with a SQLite3 database, written in C++. Features include instant messaging, posts, news feeds, friends, likes, comments, search, and a dynamic navigational menu.}
+\section{Education} 
 
-%%% Work experience
-%%% ------------------------------------------------------------
-\NewPart{Work experience}{}
+\subsection{Lafayette College}
 
-\WorkEntry{Staff Assistant/Software Developer}{May 2016-Jan 2017}{Manna Foods, LLC, Full-time}{Was hired solely to review security cameras and answer phones, but found a strong need for technology to improve daily productivity. I developed a visual basic application in Microsoft Excel to manage inventory in the warehouse. I updated company policies and procedures using Python scripts to fit government regulations regarding document formatting, and participated in upgrading a decade-old server. I also wrote multiple scripts to automate various mundane tasks that were previously performed by manual labor, such as archiving old documents, and maintaining file structure for current documents.}
-\sepspace
+\location{Easton, PA }
 
-\WorkEntry{Server}{Dec 2014-Jan 2017}{Golden Corral, Part-Time}{Provided excellent customer service over the summer, and during the school year.}
-\sepspace
+\sectionspace % Some whitespace after the section
 
-\WorkEntry{Student Employee}{Aug 2016-Present}{IT Services at Lafayette College, Part-Time}{Manages Footprints ticketing system, handles technological issues amongst faculty and students, in addition to managing infrastructure upgrades. I developed a script to automate paper/ink tracking across the department's printers.}
-
-%%% Skills
-%%% ------------------------------------------------------------
-\NewPart{Skills}{}
-
-\SkillsEntry{Languages}{\textsc{Python}, \textsc{Visual Basic}, \textsc{CSS}, \textsc{JavaScript}, \textsc{HTML5}, \textsc{Java}, \textsc{C++},}
-\SkillsEntry{ }{\LaTeX}
-\SkillsEntry{Frameworks}{\textsc{Bootstrap}, \textsc{BeautifulSoup}, \textsc{SQLite3}}
+\descript{B.A. in Computer Science \\ and Religious Studies}
+\location{Expected May 2019 } 
 
 
-%%% References
-%%% ------------------------------------------------------------
-%\NewPart{References}{}
-%Available upon request
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+
+\section{Skills}
+
+\subsection{Programming}
+
+\location{Experienced with:}
+Python \textbullet{} Flask \textbullet{} PostgreSQL \textbullet{} MySQL \\ HTML \textbullet{} CSS \textbullet{} JavaScript \textbullet{} JQuery \\
+\location{Familiar with:}
+BASH \textbullet{} C++ \textbullet{} C \textbullet{} R \textbullet{} Java \\ Ruby on Rails \textbullet{} Celery \textbullet{} Docker \\
+\sectionspace
+
+\subsection{Tools/Applications}
+Visual Studio Code \textbullet{} MySQL Workbench \\ QtCreator \textbullet{} MATLAB
+
+\sectionspace
+\subsection{Operating Systems}
+MacOS \textbullet{} Ubuntu \textbullet{} Fedora \textbullet {} Mint \\ Windows
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Coursework
+%------------------------------------------------
+
+\section{Coursework}
+
+
+%------------------------------------------------
+
+\subsection{Software}
+
+Data Structures \& Algorithms \\
+Operating Systems \\
+Artificial Intelligence \\
+Theories of Computation \\
+Analysis of Algorithms \\
+Software Engineering \\
+{\footnotesize \textit{\textbf{(NCurses, QtCreator \& C++) }}} \\
+Database Management Systems \\
+{\footnotesize \textit{\textbf{(Ruby on Rails, HTML, CSS, Javascript \& PostgreSQL) }}} \\
+ 
+\sectionspace
+
+\subsection{Mathematics}
+Calculus I, II, \& III \\
+Mathematical Modeling \\
+Statistics \\
+Discrete Structures \\
+Logic \\
+
+\sectionspace
+
+\subsection{Other}
+Physics\\
+Computers and Society\\
+Computer Organization
+
+
+\sectionspace % Some whitespace after the section
+
+
+%------------------------------------------------
+% Links
+%------------------------------------------------
+
+\section{Links} 
+
+Github: github.com/EverlastingBugstopper \\
+LinkedIn: linkedin.com/in/avery-harnish \\
+
+
+\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.64\textwidth} % The right column takes up 64% of the text width of the page
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Experience}
+
+\runsubsection{Snowvation Inc.}
+\descript{| Software Development Intern}
+
+\location{May. 2017 – present | Bethlehem, PA \& Denver, CO}
+Since the summer of 2017, I have worked with a small team of engineers to re-write Shredbetter.com in conjunction with the SV Enterprise system.
+\sectionspace
+\begin{tightitemize}
+\item In a few short months we produced an enterprise platform featuring both e-commerce and point of sale functionality. The site is an overall hub for ski resorts, with a focus on scheduling ski/snowboarding lessons.
+\item Since beginning my work here, I have designed database models, made user experience decisions, and have developed numerous features from start to finish, across the whole stack. 
+\item Some of the recent features I have developed are automated emails that notify guests of upcoming lessons, and a user portal for instructors and students that includes useful scheduling information and the ability to view/send progress cards.
+\item The technologies used on a daily basis are Python3 with Flask/Jinja2, MySQL, JQuery, HTML, and SCSS.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+\runsubsection{Manna Foods}
+\descript{| Technical Staff Assistant}
+
+\location{June 2016 – January 2017 | Lebanon, PA}
+I was initially hired by Manna Foods to review security footage and answer phone calls, but over time my responsibilities expanded to include providing assistance to managerial staff with their technological needs
+\begin{tightitemize}
+\item I developed several small scripts to automate repetitive tasks and update forms/procedures
+\item I created a standalone user-friendly employee scheduling application
+\item The warehouse relied on a paper-based system to manage their inventory, so I created a simple management system with VBA and Excel to help with consistency
+\item Over time, I also updated decades-old system architecture, and helped with the migration of old data to the newer system
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+
+
+\runsubsection{Lafayette College IT Services}
+\descript{| Student Employee}
+
+\location{August 2016 – May. 2017 | Easton, PA}
+\begin{tightitemize}
+\item Provided technical support at the help desk for faculty and students at Lafayette College
+\item Helped recycle and replace old hardware in academic buildings
+\end{tightitemize}
+
+\sectionspace
+
+\runsubsection{Leadership Positions}
+\begin{tightitemize}
+\item 2016-2018 Treasurer of the Association for Computing Machinery's 
+Lafayette College Chapter \\
+\end{tightitemize}
+
+\sectionspace
+
+
+%------------------------------------------------
+% Independent Projects
+%------------------------------------------------
+
+\section{Independent Projects}
+
+\runsubsection{Draw Your Professor API}
+\descript{| See Github}
+I have developed a web app that scrapes the data from drawyourprofessor.com. This data is then represented visually, and with REST endpoints that serve the data in a JSON object.
+\begin{tightitemize}
+\item Drawings of professors can be viewed on a school by school basis
+\item The scraped data is also served in JSON objects via REST endpoints
+\item The web app runs with Flask and the data is stored in a SQLite3 database
+\end{tightitemize}
+
+%------------------------------------------------
+% Societies
+%------------------------------------------------
+
+%\section{Membership} 
+
+%\begin{tabular}{rll}
+%2011-2015 & Alpha Kappa Lambda Fraternity\\
+
+%\end{tabular}
+
+%\sectionspace % Some whitespace after the section
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%\section{Example Section}
+
+%\end{minipage} % The end of the left column
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+%\section{Example Section 2}
+
+%\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+
 \end{document}
