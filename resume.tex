@@ -149,17 +149,17 @@ LinkedIn: \href{https://linkedin.com/in/avery-harnish}{avery-harnish} \\
 
 \location{May. 2018 – current | Austin, TX}
 \sectionspace
-My main project consisted of implementing a prototype that generates \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges}, on the fly in \href{https://developers.cloudflare.com/workers/}{Cloudflare Edge Workers}. Signed Exchanges let a publisher take static content such as AMP pages, sign it, and then allow other people to distribute it. Google has proposed Signed Exchanges as a solution to AMP's \href{https://80x24.net/post/the-problem-with-amp/}{URL attribution problem}. 
+My main project consisted of implementing a system that generates \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges}, on the fly, in \href{https://developers.cloudflare.com/workers/}{Cloudflare Edge Workers}. Signed Exchanges let a publisher take static content such as AMP pages, cryptographically sign it, and then allow other people to distribute it. Google has proposed Signed Exchanges as a solution to AMP's \href{https://80x24.net/post/the-problem-with-amp/}{URL attribution problem}. 
 \sectionspace
 \begin {tightitemize}
-\item This is currently a Standards Track Internet Draft, mainstream adoption is still far away
-\item Signed Exchanges involve implementing Merkle Integrity Content Encoding, and signing with ECDSA keys.
-\item Implementing this in a Cloudflare Edge Worker takes the burden off of publishers, all they will need to do is enable the script in front of their zone and Google's AMP cache will serve their AMP pages with the proper URL
+\item Signed Exchanges involve implementing Merkle Integrity Content Encoding, and signing with ECDSA keys
+\item Implementing this in a Cloudflare Edge Worker takes the burden off of publishers, as all they will need to do is enable the script in front of their zone and Google's AMP cache will serve their AMP pages with the proper URL
+\item This is currently a Standards Track Internet Draft, mainstream adoption is still far away, and is not yet available to Cloudflare customers
 \end {tightitemize}
 I also developed the following applications for use in Cloudflare Edge Workers
 \begin {tightitemize}
-\item Lightweight router similar to Express to run web applications at the edge
-\item Prototype of CRUD actions over HTTPS with Cloudflared and Edge workers
+\item Lightweight router similar to Express to run web applications at the edge, my website is served from Cloudflare's edge
+\item Prototyped SQL queries over HTTPS using cloudflared by parsing and inserting user agent data about each route on a site
 \end {tightitemize}
 \sectionspace
 \runsubsection{Snowvation Inc.}
