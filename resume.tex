@@ -30,7 +30,7 @@
 \lastupdated % Print the Last Updated text at the top right
 
 \namesection{Avery}{Harnish}{ % Your name
-\href{mailto:averyharnish@gmail.com}{averyharnish@gmail.com} | 717.454.7980 % Your contact information
+\href{mailto:averyharnish@gmail.com}{averyharnish@gmail.com} | \href{https://averyharnish.com}{averyharnish.com} | 717.454.7980 % Your contact information
 }
 
 %----------------------------------------------------------------------------------------
@@ -66,17 +66,9 @@
 \subsection{Programming}
 
 \location{Experienced with:}
-Python \textbullet{} Flask \textbullet{} PostgreSQL \textbullet{} MySQL \\ HTML \textbullet{} CSS \textbullet{} JavaScript \textbullet{} JQuery \\
+Cloudflare Workers \textbullet{} Javascript \textbullet{} Python \textbullet{} Flask \textbullet{} SQL \\ HTML \textbullet{} CSS \textbullet{} Docker \textbullet{} jQuery \\
 \location{Familiar with:}
-BASH \textbullet{} C++ \textbullet{} C \textbullet{} R \textbullet{} Java \\ Ruby on Rails \textbullet{} Celery \textbullet{} Docker \\
-\sectionspace
-
-\subsection{Tools/Applications}
-Visual Studio Code \textbullet{} MySQL Workbench \\ QtCreator \textbullet{} MATLAB
-
-\sectionspace
-\subsection{Operating Systems}
-MacOS \textbullet{} Ubuntu \textbullet{} Fedora \textbullet {} Mint \\ Windows
+Golang \textbullet{} React \textbullet{} C++ \textbullet{} C \textbullet{} R \textbullet{} Java \\ Ruby \& Ruby on Rails \textbullet{} Docker \\
 
 \sectionspace % Some whitespace after the section
 
@@ -100,6 +92,7 @@ Software Engineering \\
 {\footnotesize \textit{\textbf{(NCurses, QtCreator \& C++) }}} \\
 Database Management Systems \\
 {\footnotesize \textit{\textbf{(Ruby on Rails, HTML, CSS, Javascript \& PostgreSQL) }}} \\
+Operating Systems \\
  
 \sectionspace
 
@@ -127,6 +120,7 @@ Computer Organization
 
 \section{Links} 
 
+Site: \href{https://averyharnish.com}{averyharnish.com} \\
 Github: \href{https://github.com/EverlastingBugstopper}{EverlastingBugstopper} \\
 LinkedIn: \href{https://linkedin.com/in/avery-harnish}{avery-harnish} \\
 
@@ -148,20 +142,50 @@ LinkedIn: \href{https://linkedin.com/in/avery-harnish}{avery-harnish} \\
 % Experience
 %------------------------------------------------
 
-\section{Experience}
+\section{2 Years of Industry Experience}
 
+\runsubsection{Cloudflare Inc.}
+\descript{| Systems Engineer Intern}
+
+\location{May. 2018 – current | Austin, TX}
+\sectionspace
+My main project consisted of implementing a prototype that generates \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges}, on the fly in \href{https://developers.cloudflare.com/workers/}{Cloudflare Edge Workers}. Signed Exchanges let a publisher take static content such as AMP pages, sign it, and then allow other people to distribute it. Google has proposed Signed Exchanges as a solution to AMP's \href{https://80x24.net/post/the-problem-with-amp/}{URL attribution problem}. 
+\sectionspace
+\begin {tightitemize}
+\item This is currently a Standards Track Internet Draft, mainstream adoption is still far away
+\item Signed Exchanges involve implementing Merkle Integrity Content Encoding, and signing with ECDSA keys.
+\item Implementing this in a Cloudflare Edge Worker takes the burden off of publishers, all they will need to do is enable the script in front of their zone and Google's AMP cache will serve their AMP pages with the proper URL
+\end {tightitemize}
+I also developed the following applications for use in Cloudflare Edge Workers
+\begin {tightitemize}
+\item Lightweight router similar to Express to run web applications at the edge
+\item Prototype of CRUD actions over HTTPS with Cloudflared and Edge workers
+\end {tightitemize}
+\sectionspace
 \runsubsection{Snowvation Inc.}
 \descript{| Software Development Intern}
 
-\location{May. 2017 – present | Bethlehem, PA \& Denver, CO}
-Since the summer of 2017, I have worked with a small team of engineers to re-write Shredbetter.com in conjunction with the SV Enterprise system.
+\location{May. 2017 – Jan. 2018 | Bethlehem, PA \& Denver, CO}
+I worked with a small team of engineers to create shredbetter.com from the ground up.
 \sectionspace
 \begin{tightitemize}
-\item In a few short months we produced an enterprise platform featuring both e-commerce and point of sale functionality. The site is an overall hub for ski resorts, with a focus on scheduling ski/snowboarding lessons.
-\item Since beginning my work here, I have designed database models, made user experience decisions, and have developed numerous features from start to finish, across the whole stack. 
-\item Some of the recent features I have developed are automated emails that notify guests of upcoming lessons, and a user portal for instructors and students that includes useful scheduling information and the ability to view/send progress cards.
-\item The technologies used on a daily basis are Python3 with Flask/Jinja2, MySQL, JQuery, HTML, and SCSS.
+\item In a few short months our team produced a b2b and b2c platform for ski resorts, their instructors, and their customers. The site allows users to leave reviews for instructors, request specific instructors for their lessons, and allows resorts to sell ski/snowboard rentals, and any other product.
+\item I designed database models, made user experience decisions, and developed numerous features from start to finish, across the whole stack. 
+\item I developed an automated email system that notifies guests of upcoming lessons, a user portal for instructors and students that includes useful scheduling information and the ability to view/send progress cards.
+\item Our stack was made for back-end developers. Server-side rendering with Jinja2 and jQuery power the site's front end, whil the back end is a (dockerized) Flask app interacting with MySQL, mainly with SQLAlchemy due to the ever changing database models.
 \end{tightitemize}
+
+\runsubsection{Lafayette College IT Services}
+\descript{| Student Consultant}
+
+\location{August 2016 – current | Easton, PA}
+\begin{tightitemize}
+\item Work with the Registrar office to automate maintenance of department information
+\item Regularly attend ITS board meetings
+\item Provided technical support at the help desk for faculty and students at Lafayette College
+\end{tightitemize}
+
+\sectionspace
 
 \sectionspace % Some whitespace after the section
 
@@ -170,90 +194,19 @@ Since the summer of 2017, I have worked with a small team of engineers to re-wri
 \descript{| Technical Staff Assistant}
 
 \location{June 2016 – January 2017 | Lebanon, PA}
-I was initially hired by Manna Foods to review security footage and answer phone calls, but over time my responsibilities expanded to include providing assistance to managerial staff with their technological needs
-\begin{tightitemize}
-\item I developed several small scripts to automate repetitive tasks and update forms/procedures
-\item I created a standalone user-friendly employee scheduling application
-\item The warehouse relied on a paper-based system to manage their inventory, so I created a simple management system with VBA and Excel to help with consistency
-\item Over time, I also updated decades-old system architecture, and helped with the migration of old data to the newer system
-\end{tightitemize}
 
 \sectionspace % Some whitespace after the section
 
 %------------------------------------------------
 
 
-
-\runsubsection{Lafayette College IT Services}
-\descript{| Student Employee}
-
-\location{August 2016 – May. 2017 | Easton, PA}
-\begin{tightitemize}
-\item Provided technical support at the help desk for faculty and students at Lafayette College
-\item Helped recycle and replace old hardware in academic buildings
-\end{tightitemize}
-
-\sectionspace
-
 \runsubsection{Leadership Positions}
 \begin{tightitemize}
 \item 2016-2018 Treasurer of the Association for Computing Machinery's 
 Lafayette College Chapter \\
+\item 2017-2018 Copy Editor for The Lafayette 
 \end{tightitemize}
 
 \sectionspace
-
-
-%------------------------------------------------
-% Independent Projects
-%------------------------------------------------
-
-\section{Independent Projects}
-
-\runsubsection{Draw Your Professor API}
-\descript{| \href{https://prof-api.herokuapp.com}{prof-api.herokuapp.com}}
-I have developed a web app that scrapes the data from drawyourprofessor.com. This data is then represented visually, and with REST endpoints that serve the data in a JSON object.
-\begin{tightitemize}
-\item Drawings of professors can be viewed on a school by school basis
-\item The scraped data is also served in JSON objects via REST endpoints
-\item The web app runs with Flask and the data is stored in a SQLite3 database
-\end{tightitemize}
-
-%------------------------------------------------
-% Societies
-%------------------------------------------------
-
-%\section{Membership} 
-
-%\begin{tabular}{rll}
-%2011-2015 & Alpha Kappa Lambda Fraternity\\
-
-%\end{tabular}
-
-%\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
-
 \end{minipage} % The end of the right column
-
-%----------------------------------------------------------------------------------------
-%	SECOND PAGE (EXAMPLE)
-%----------------------------------------------------------------------------------------
-
-%\newpage % Start a new page
-
-%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
-
-%\section{Example Section}
-
-%\end{minipage} % The end of the left column
-%\hfill
-%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
-
-%\section{Example Section 2}
-
-%\end{minipage} % The end of the right column
-
-%----------------------------------------------------------------------------------------
-
 \end{document}
