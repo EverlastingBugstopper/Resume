@@ -20,6 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+\usepackage{titlesec}
 
 \begin{document}
 
@@ -43,7 +44,7 @@
 % Education
 %------------------------------------------------
 
-\section{Education} 
+\section*{Education} 
 
 \subsection{Lafayette College}
 
@@ -61,7 +62,7 @@
 % Skills
 %------------------------------------------------
 
-\section{Skills}
+\section*{Skills}
 
 \subsection{Programming}
 
@@ -77,7 +78,7 @@ Golang \textbullet{} React \textbullet{} C++ \textbullet{} C \textbullet{} R \te
 % Coursework
 %------------------------------------------------
 
-\section{Coursework}
+\section*{Coursework}
 
 
 %------------------------------------------------
@@ -119,7 +120,7 @@ Computer Organization
 % Links
 %------------------------------------------------
 
-\section{Links} 
+\section*{Links} 
 
 Site: \href{https://averyharnish.com}{averyharnish.com} \\
 Github: \href{https://github.com/EverlastingBugstopper}{EverlastingBugstopper} \\
@@ -143,46 +144,43 @@ LinkedIn: \href{https://linkedin.com/in/avery-harnish}{avery-harnish} \\
 % Experience
 %------------------------------------------------
 
-\section{2+ Years of Industry Experience}
+\section*{Experience}
 
 \runsubsection{Cloudflare Inc.}
 \descript{| Systems Engineer Intern}
 
-\location{May. 2018 – current | Austin, TX}
+\location{May. 2018 –  present | Austin, TX}
 \sectionspace
-My main project consisted of implementing a system that generates \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges}, on the fly, in \href{https://developers.cloudflare.com/workers/}{Cloudflare Edge Workers}. Signed Exchanges let a publisher take static content such as AMP pages, cryptographically sign it, and then allow other people to distribute it. Google has proposed Signed Exchanges as a solution to AMP's \href{https://80x24.net/post/the-problem-with-amp/}{URL attribution problem}. 
+I developed the following applications in the new \href{https://cloudflareworkers.com}{Cloudflare Edge Worker} environment:
 \sectionspace
 \begin {tightitemize}
-\item Signed Exchanges involve implementing Merkle Integrity Content Encoding, and signing with ECDSA keys
-\item Implementing this in a Cloudflare Edge Worker takes the burden off of publishers, as all they will need to do is enable the script in front of their zone and Google's AMP cache will serve their AMP pages with the proper URL
-\item This is currently a Standards Track Internet Draft, mainstream adoption is still far away, and is not yet available to Cloudflare customers
-\end {tightitemize}
-I also developed the following applications for use in Cloudflare Edge Workers
-\begin {tightitemize}
-\item Lightweight router similar to Express to run web applications at the edge, my website is served from Cloudflare's edge
-\item Prototyped SQL queries over HTTPS using cloudflared by parsing and inserting user agent data about each route on a site
+\item A prototype signing and generating static content and preparing \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges} for consumption by Google's AMP cache
+\item Lightweight router similar to Express to run web applications at the edge. My \href{https://averyharnish.com}{website} is served from Cloudflare's edge
+\item An application the parsed user agent of every request SQL queries over HTTPS using cloudflared by parsing and inserting user agent data about each route on a site
 \end {tightitemize}
 \sectionspace
 \runsubsection{Snowvation Inc.}
 \descript{| Software Development Intern}
 
 \location{May. 2017 – Jan. 2018 | Bethlehem, PA \& Denver, CO}
-I worked with a small team of engineers to create shredbetter.com from the ground up.
+I worked with a small team of engineers to create shredbetter.com from the ground up. I designed and developed the following:
 \begin{tightitemize}
-\item In a few short months our team produced a b2b and b2c platform for ski resorts, their instructors, and their customers. The site allows users to leave reviews for instructors, request specific instructors for their lessons, and allows resorts to sell ski/snowboard rentals, and any other product.
-\item I designed database models, made user experience decisions, and developed numerous features from start to finish, across the whole stack. 
-\item I developed an automated email system that notifies guests of upcoming lessons, a user portal for instructors and students that includes useful scheduling information and the ability to view/send progress cards.
-\item Our stack was made for back-end developers. Server-side rendering with Jinja2 and jQuery power the site's front end, whil the back end is a (dockerized) Flask app interacting with MySQL.
+\item Database models to support the data of ski resorts and our userbase
+\item Forms to supply the database models with data
+\item A central user portal for administrators, instructors, students, and customers with calendar integration
+\item An automated email system that notifies guests of upcoming lessons
 \end{tightitemize}
 \sectionspace
 \runsubsection{Lafayette College IT Services}
 \descript{| Student Consultant}
 
 \location{August 2016 – current | Easton, PA}
+\sectionspace
+I work part time for ITS at school fulfilling multiple roles across the department
 \begin{tightitemize}
-\item Work with the Registrar office to automate maintenance of department information
+\item Work with the Office of the Registrar to automate the migration of department evaluation criteria to a new system
 \item Regularly attend ITS board meetings
-\item Provided technical support at the help desk for faculty and students
+\item Provided technical support and repair service at the help desk for faculty and students
 \end{tightitemize}
 \sectionspace % Some whitespace after the section
 
@@ -191,13 +189,22 @@ I worked with a small team of engineers to create shredbetter.com from the groun
 \descript{| Technical Staff Assistant}
 
 \location{June 2016 – January 2017 | Lebanon, PA}
-
+\sectionspace
+I worked to decrease technological pain points for the company and developed systems to solve problems
+\begin{tightitemize}
+\item Created a process for security camera review with a GUI
+\item Created an employee scheduling system to lower the time spent formatting excel sheets for management
+\item Created an inventory management system for use by warehouse workers
+\item Created an automated system for formatting company policy in accordance to new Hazard Analysis and Risk-based Preventive Controls (HARPC) standards
+\end{tightitemize}
 \sectionspace % Some whitespace after the section
 
 %------------------------------------------------
 
 
 \runsubsection{Leadership Positions}
+\descript{}
+\location{Lafayette College}
 \begin{tightitemize}
 \item 2016-2018 Treasurer of the Association for Computing Machinery's 
 Lafayette College Chapter \\
