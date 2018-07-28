@@ -1,216 +1,142 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy CV/Resume
-% XeLaTeX Template
-% Version 1.0 (5/5/2014)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% This is a modified ONE COLUMN version of
+% the following template:
+% 
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
 %
 % Original author:
-% Debarghya Das (http://www.debarghyadas.com)
-% With extensive modifications by:
-% Vel (vel@latextemplates.com)
+% Debarghya Das (http://debarghyadas.com)
 %
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
 %
-% Important notes:
-% This template needs to be compiled with XeLaTeX.
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
-\usepackage{titlesec}
+\documentclass[]{deedy-resume-openfont}
+
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
 
-\lastupdated % Print the Last Updated text at the top right
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\namesection{Avery}{Harnish}{ % Your name
-\href{mailto:averyharnish@gmail.com}{averyharnish@gmail.com} | \href{https://averyharnish.com}{averyharnish.com} | 717.454.7980 % Your contact information
+
+\namesection{Avery}{Harnish}{ \href{mailto:averyharnish@gmail.com}{averyharnish@gmail.com} | \href{https://averyharnish.com}{averyharnish.com} | +1.717.454.7980
 }
+\section{Experience}
 
-%----------------------------------------------------------------------------------------
-%	LEFT COLUMN
-%----------------------------------------------------------------------------------------
+\runsubsection{Cloudflare, Inc.}
+\descript{| Systems Engineer Intern }
+\location{May 2018 – Aug 2018 | Austin, TX}
+\vspace{\topsep}
+I worked with the Product Strategy team to develop new and exciting applications for the \href{https://cloudflareworkers.com}{Cloudflare Edge Worker product}
+\begin{tightemize}
+\item I worked closely with Google's AMP and Chrome developers to create the first application that can generate \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges} on the fly for consumption by Google's AMP Cache. This ongoing project will solve the URL attribution error that plagues Google's AMP project with no effort required from content publishers
+\item Developed a lightweight router using ES6 Javascript that can be used to conditionally apply multiple worker scripts and/or render web pages
+\item Created a simple, zone-agnostic worker that parses the user agent of every request, and inserts the data into a PostgreSQL database over HTTPS. The same worker charts the browser and operating system data of the site's visitors using chart.js
+\item Created a CLI component for \href{https://serverless.com}{serverless.com} using Javascript and the Cloudflare API that allows developers to easily manage custom logic running in a Cloudflare worker
+\end{tightemize}
+\sectionsep
 
-\begin{minipage}[t]{0.35\textwidth} % The left column takes up 35% of the text width of the page
+\runsubsection{Snowvation, Inc.}
+\descript{| Software Engineering Intern }
+\location{May 2017 – January 2018 | Bethlehem, PA \& Denver, CO}
+\vspace{\topsep}
+Created \href{https://shredbetter.com}{shredbetter.com} using Flask and MySQL with a team of 3-5 engineers
+\begin{tightemize}
+\item Developed a central user portal used by tens of thousands of customers during peak season for ski resort administrators, instructors, students, and customers using Python and FullCalendar
+\item Created a system that reminds thousands of customers of their upcoming ski/snowboard lessons 
+\item Regularly made important UI/UX and backend decisions that directly led to increased customer satisfaction and contract renewals
+\end{tightemize}
+\sectionsep
 
-%------------------------------------------------
-% Education
-%------------------------------------------------
-
-\section*{Education} 
-
-\subsection{Lafayette College}
-
-\location{Easton, PA }
-
-\sectionspace % Some whitespace after the section
-
-\descript{B.A. in Computer Science \\ and Religious Studies}
-\location{Expected May 2019 } 
-
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Skills
-%------------------------------------------------
-
-\section*{Skills}
-
-\subsection{Programming}
-
-\location{Experienced with:}
-Cloudflare Workers \textbullet{} Javascript \\ Python \textbullet{} Flask \textbullet{} SQL \textbullet{} HTML \\ (S)CSS \textbullet{} Docker \textbullet{} jQuery \\
-\sectionspace
-\location{Familiar with:}
-Golang \textbullet{} React \textbullet{} C++ \textbullet{} C \textbullet{} R \textbullet{} Java \\ Ruby \& Ruby on Rails \textbullet{} Docker \\
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Coursework
-%------------------------------------------------
-
-\section*{Coursework}
-
-
-%------------------------------------------------
-
-\subsection{Software}
-
-Data Structures \& Algorithms \\
-Operating Systems \\
-Artificial Intelligence \\
-Theories of Computation \\
-Analysis of Algorithms \\
-Software Engineering \\
-{\footnotesize \textit{\textbf{(NCurses, QtCreator \& C++) }}} \\
-Database Management Systems \\
-{\footnotesize \textit{\textbf{(Ruby on Rails, HTML, CSS, Javascript \& PostgreSQL) }}} \\
-Operating Systems \\
- 
-\sectionspace
-
-\subsection{Mathematics}
-Calculus I, II, \& III \\
-Mathematical Modeling \\
-Statistics \\
-Discrete Structures \\
-Logic \\
-
-\sectionspace
-
-\subsection{Other}
-Physics\\
-Computers and Society\\
-Computer Organization
-
-
-\sectionspace % Some whitespace after the section
-
-
-%------------------------------------------------
-% Links
-%------------------------------------------------
-
-\section*{Links} 
-
-Site: \href{https://averyharnish.com}{averyharnish.com} \\
-Github: \href{https://github.com/EverlastingBugstopper}{EverlastingBugstopper} \\
-LinkedIn: \href{https://linkedin.com/in/avery-harnish}{avery-harnish} \\
-
-
-\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
-
-\end{minipage} % The end of the left column
-\hfill
-%
-%----------------------------------------------------------------------------------------
-%	RIGHT COLUMN
-%----------------------------------------------------------------------------------------
-%
-\begin{minipage}[t]{0.64\textwidth} % The right column takes up 64% of the text width of the page
-
-%------------------------------------------------
-% Experience
-%------------------------------------------------
-
-\section*{Experience}
-
-\runsubsection{Cloudflare Inc.}
-\descript{| Systems Engineer Intern}
-
-\location{May. 2018 –  present | Austin, TX}
-\sectionspace
-I developed the following applications in the new \href{https://cloudflareworkers.com}{Cloudflare Edge Worker} environment:
-\sectionspace
-\begin {tightitemize}
-\item A prototype signing and generating static content and preparing \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges} for consumption by Google's AMP cache
-\item Lightweight router similar to Express to run web applications at the edge. My \href{https://averyharnish.com}{website} is served from Cloudflare's edge
-\item An application the parsed user agent of every request SQL queries over HTTPS using cloudflared by parsing and inserting user agent data about each route on a site
-\end {tightitemize}
-\sectionspace
-\runsubsection{Snowvation Inc.}
-\descript{| Software Development Intern}
-
-\location{May. 2017 – Jan. 2018 | Bethlehem, PA \& Denver, CO}
-I worked with a small team of engineers to create shredbetter.com from the ground up. I designed and developed the following:
-\begin{tightitemize}
-\item Database models to support the data of ski resorts and our userbase
-\item Forms to supply the database models with data
-\item A central user portal for administrators, instructors, students, and customers with calendar integration
-\item An automated email system that notifies guests of upcoming lessons
-\end{tightitemize}
-\sectionspace
 \runsubsection{Lafayette College IT Services}
-\descript{| Student Consultant}
+\descript{| Consultant}
+\location{August 2016 – present | Easton, PA}
+\begin{tightemize}
+\item Saved an estimated 50 hours of manual data entry by automating the migration of \~1700 department evaluation files from 35 departments to a new system using Python and Selenium.
+\item Regularly provide inputs at weekly board meetings as a student ambassador
+\item Provide technical support and repair services to students and faculty at the help desk
+\end{tightemize}
+\sectionsep
 
-\location{August 2016 – current | Easton, PA}
-\sectionspace
-I work part time for ITS at school fulfilling multiple roles across the department
-\begin{tightitemize}
-\item Work with the Office of the Registrar to automate the migration of department evaluation criteria to a new system
-\item Regularly attend ITS board meetings
-\item Provided technical support and repair service at the help desk for faculty and students
-\end{tightitemize}
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
 \runsubsection{Manna Foods}
 \descript{| Technical Staff Assistant}
-
 \location{June 2016 – January 2017 | Lebanon, PA}
-\sectionspace
-I worked to decrease technological pain points for the company and developed systems to solve problems
-\begin{tightitemize}
-\item Created a process for security camera review with a GUI
-\item Created an employee scheduling system to lower the time spent formatting excel sheets for management
-\item Created an inventory management system for use by warehouse workers
-\item Created an automated system for formatting company policy in accordance to new Hazard Analysis and Risk-based Preventive Controls (HARPC) standards
-\end{tightitemize}
-\sectionspace % Some whitespace after the section
+\begin{tightemize}
+\item Automated the formatting of hundreds of company policy using Python to comply with new Hazard Analysis and Risk-based Preventive Controls standards
+\item Developed a streamlined data entry process with an easy to use GUI for security footage review
+\item Created an employee scheduling system using Visual Basic to save managerial overhead and reduce employee confusion
+\end{tightemize}
+\sectionsep
 
-%------------------------------------------------
+\section{Education}
+\runsubsection{Lafayette College}
+\descript{| B.A. In Computer Science and Religious Studies}
+\location{Expected May 2019 | Easton, PA}
+\sectionsep
 
-
-\runsubsection{Leadership Positions}
-\descript{}
+\section{Skills}
+\begin{minipage}[t]{.4\textwidth}
+\subsection{Programming}
+\location{Experienced with:}
+Cloudflare Workers \textbullet{} Javascript \\ Python \textbullet{} Flask \textbullet{} SQL \textbullet{} HTML \\ (S)CSS \textbullet{} Docker \textbullet{} jQuery \\
+\location{Familiar with:}
+Golang \textbullet{} React \textbullet{} C++ \textbullet{} C \textbullet{} R \textbullet{} Java \\ Ruby \& Ruby on Rails \textbullet{} D3 \\
+\sectionsep
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\textwidth}
+\subsection{Leadership Positions}
 \location{Lafayette College}
-\begin{tightitemize}
-\item 2016-2018 Treasurer of the Association for Computing Machinery's 
-Lafayette College Chapter \\
-\item 2017-2018 Copy Editor for The Lafayette 
-\end{tightitemize}
+\textbullet{} Treasurer of the Association for Computing Machinery \\
+\textbullet{} Copy Editor for The Lafayette \\
+\textbullet{} Student Ambassador for Lafayette ITS
+\end{minipage}
 
-\sectionspace
-\end{minipage} % The end of the right column
-\end{document}
+\end{document}  \documentclass[]{article}
