@@ -49,7 +49,6 @@
 
 \documentclass[]{deedy-resume-openfont}
 
-
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,15 +69,29 @@
 \section{Experience}
 
 \runsubsection{Cloudflare, Inc.}
-\descript{| Systems Engineer Intern }
-\location{May 2018 – Aug 2018 | Austin, TX}
+\descript{| Systems Engineer}
+\location{November 2018 - Current | Austin, TX}
 \vspace{\topsep}
-I worked with the Product Strategy team to develop new and exciting applications for the \href{https://cloudflareworkers.com}{Cloudflare Edge Worker product}
+Continually improving the developer experience of \href{https://workers.cloudflare.com}{Cloudflare Workers} through:
 \begin{tightemize}
-\item I worked with Google's AMP and Chrome developers to create a scalable application that generates \href{https://tools.ietf.org/html/draft-yasskin-http-origin-signed-responses-04}{Signed HTTP Exchanges} on the fly for consumption by Google's AMP Cache. Cloudflare is positioned to release this signed exchange worker to its customers alongside the update to Google's AMP Cache allowing it to consume and serve signed exchanges.
-\item Developed a Javascript module (\href{https://www.npmjs.com/package/sql-gateway}{sql-gateway}) that interfaces with Argo Tunnel's cloudflared daemon for use in Cloudflare Workers.
-\item Using the sql-gateway module, I created a Cloudflare worker that parses the user agent of every incoming request and inserts the data into a PostgreSQL database over HTTPS. The same worker generates visualizations of the browser and operating system data of selected routes.
-\item Worked to create both a Cloudflare component and a Cloudflare provider plugin for \href{https://serverless.com}{serverless.com} using Javascript and the Cloudflare API.
+\item Consistent management and triage of \href{https://github.com/cloudflare/wrangler}{Wrangler}'s open source issue tracker and community pull requests.
+\item Continuous contribution to Rust open source projects that Wrangler relies on such as tokio, wasm-pack, cargo-generate, and binary-install.
+\item Development and maintenance of numerous components of \href{https://workers.cloudflare.com/sites}{Workers Sites} which boasts faster response times when benchmarked against similar products such as Netlify and Zeit.
+\item Creation of \href{https://github.com/cloudflare/wrangler/milestone/18}{wrangler dev} which allows developers to test their applications with any HTTP client without deploying to Cloudflare's network.
+\item The creation of an open source \href{https://github.com/EverlastingBugstopper/worker-typescript-template}{template} for developing Cloudflare Workers with TypeScript.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Cloudflare, Inc.}
+\descript{| Systems Engineer Intern }
+\location{May 2018 – November 2018 | Austin, TX and Easton, PA}
+\vspace{\topsep}
+Developed applications for Cloudflare's global network with  \href{https://workers.cloudflare.com}{Cloudflare Workers}:
+\begin{tightemize}
+\item Implemented \href{https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html}{Signed HTTP Exchanges} to provide \href{https://www.cloudflare.com/website-optimization/amp-real-url/}{Real URLs} for Cloudflare customers with AMP pages. This product now serves ~2k signed exchanges per second to Googlebot.
+\item Wrote a technical \href{https://blog.cloudflare.com/real-urls-for-amp-cached-content-using-cloudflare-workers/}{blog post} to announce AMP Real URL.
+\item Spoke about AMP Real URL and signed exchanges at the AMP Contributor Summit in October of 2018.
+\item Developed the first version of the \href{https://developers.cloudflare.com/workers/tooling/serverless/}{Serverless Plugin} for Cloudflare Workers.
 \end{tightemize}
 \sectionsep
 
@@ -86,16 +99,16 @@ I worked with the Product Strategy team to develop new and exciting applications
 \descript{| Software Engineering Intern }
 \location{May 2017 – January 2018 | Bethlehem, PA \& Denver, CO}
 \vspace{\topsep}
-Created \href{https://shredbetter.com}{shredbetter.com} using Flask and MySQL with a team of 3-5 engineers.
+Created a sports booking website with a small team of engineers
 \begin{tightemize}
-\item Developed a central user portal used by thousands of customers during peak season for ski resort administrators, instructors, students, and customers using Python and FullCalendar
-\item Created a system that reminds thousands of customers of their upcoming ski/snowboard lessons .
+\item Developed a central user portal used by thousands of customers during peak season for ski resort administrators, instructors, students, and customers using Python and FullCalendar.
+\item Developed a system that reminds thousands of customers of their upcoming ski/snowboard lessons.
 \item Regularly made product decisions that directly led to increased customer satisfaction and contract renewals.
 \end{tightemize}
 \sectionsep
 
 \runsubsection{Lafayette College IT Services}
-\descript{| Consultant}
+\descript{| Work Study}
 \location{August 2016 – May 2018 | Easton, PA}
 \begin{tightemize}
 \item Saved an estimated 50 hours of manual data entry by automating the migration of \textasciitilde 1700 department evaluation files from 35 departments to a new system using Python and Selenium.
@@ -104,38 +117,22 @@ Created \href{https://shredbetter.com}{shredbetter.com} using Flask and MySQL wi
 \end{tightemize}
 \sectionsep
 
-\runsubsection{Manna Foods}
-\descript{| Technical Staff Assistant}
-\location{June 2016 – January 2017 | Lebanon, PA}
-\begin{tightemize}
-\item Automated the formatting of hundreds of company policy documents using Python to comply with new Hazard Analysis and Risk-based Preventive Controls standards.
-\item Developed a streamlined data entry process with an easy to use GUI for security footage review.
-\item Created an employee scheduling system using Visual Basic to save managerial overhead and standardize the format of posted schedules.
-\end{tightemize}
-\sectionsep
-
 \section{Education}
 \runsubsection{Lafayette College}
 \descript{| B.A. In Computer Science and Religious Studies}
-\location{Expected May 2019 | Easton, PA}
+\location{May 2019 | Easton, PA}
 \sectionsep
 
-\section{Skills}
+\section{Relevant Skills}
 \begin{minipage}[t]{.4\textwidth}
-\subsection{Programming}
-\location{Experienced with:}
-Cloudflare Workers \textbullet{} Javascript \\ Python \textbullet{} Flask \textbullet{} SQL \textbullet{} HTML \\ (S)CSS \textbullet{} Docker \textbullet{} jQuery \\
-\location{Familiar with:}
-Golang \textbullet{} React \textbullet{} C++ \textbullet{} C \textbullet{} R \textbullet{} Java \\ Ruby \& Ruby on Rails \textbullet{} D3 \\
+\subsection{Experienced with:}
+Rust \textbullet{} Cloudflare Workers \\ JavaScript \textbullet{} Open Source \\ Python \textbullet{} Flask \\ HTML \textbullet{} CI/CD \\ Technical Writing
 \sectionsep
 \end{minipage}
 \hfill
 \begin{minipage}[t]{.5\textwidth}
-\subsection{Leadership Positions}
-\location{Lafayette College}
-\textbullet{} Treasurer of the Association for Computing Machinery \\
-\textbullet{} Copy Editor for The Lafayette \\
-\textbullet{} Student Ambassador for Lafayette ITS
+\subsection{Familiar with:}
+Golang \textbullet{} CSS \textbullet{} TypeScript \\ SQL \textbullet{} Docker \textbullet{} Public Speaking
 \end{minipage}
 
 \end{document}  \documentclass[]{article}
